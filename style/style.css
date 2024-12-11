@@ -1,0 +1,589 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 50px 0;
+  background: #567;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-timer {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  margin: 0 auto 50px;
+  grid-row-gap: 30px;
+}
+.header-timer__label {
+  text-align: center;
+  grid-column: 1/6;
+  font-size: 20px;
+}
+.header-timer__description {
+  text-align: center;
+  grid-column: 1/6;
+  font-size: 24px;
+  font-weight: 500;
+}
+.header-timer__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-timer__unit-value {
+  font-size: 30px;
+  font-weight: 700;
+}
+.clock-timer {
+  height: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: solid 10px #123;
+  position: relative;
+}
+.clock-timer::after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background: red;
+  border-radius: 50%;
+}
+.clock-timer__point {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  height: 130px;
+  width: 2px;
+  background: white;
+  rotate: 10deg;
+  transform-origin: bottom center;
+}
+.clock-timer__point::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -50%;
+}
+.clock-timer__point:nth-child(1) {
+  rotate: 0deg;
+}
+.clock-timer__point:nth-child(1)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(2) {
+  rotate: 6deg;
+}
+.clock-timer__point:nth-child(2)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(3) {
+  rotate: 12deg;
+}
+.clock-timer__point:nth-child(3)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(4) {
+  rotate: 18deg;
+}
+.clock-timer__point:nth-child(4)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(5) {
+  rotate: 24deg;
+}
+.clock-timer__point:nth-child(5)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(6) {
+  rotate: 30deg;
+}
+.clock-timer__point:nth-child(6)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(7) {
+  rotate: 36deg;
+}
+.clock-timer__point:nth-child(7)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(8) {
+  rotate: 42deg;
+}
+.clock-timer__point:nth-child(8)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(9) {
+  rotate: 48deg;
+}
+.clock-timer__point:nth-child(9)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(10) {
+  rotate: 54deg;
+}
+.clock-timer__point:nth-child(10)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(11) {
+  rotate: 60deg;
+}
+.clock-timer__point:nth-child(11)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(12) {
+  rotate: 66deg;
+}
+.clock-timer__point:nth-child(12)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(13) {
+  rotate: 72deg;
+}
+.clock-timer__point:nth-child(13)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(14) {
+  rotate: 78deg;
+}
+.clock-timer__point:nth-child(14)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(15) {
+  rotate: 84deg;
+}
+.clock-timer__point:nth-child(15)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(16) {
+  rotate: 90deg;
+}
+.clock-timer__point:nth-child(16)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(17) {
+  rotate: 96deg;
+}
+.clock-timer__point:nth-child(17)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(18) {
+  rotate: 102deg;
+}
+.clock-timer__point:nth-child(18)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(19) {
+  rotate: 108deg;
+}
+.clock-timer__point:nth-child(19)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(20) {
+  rotate: 114deg;
+}
+.clock-timer__point:nth-child(20)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(21) {
+  rotate: 120deg;
+}
+.clock-timer__point:nth-child(21)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(22) {
+  rotate: 126deg;
+}
+.clock-timer__point:nth-child(22)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(23) {
+  rotate: 132deg;
+}
+.clock-timer__point:nth-child(23)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(24) {
+  rotate: 138deg;
+}
+.clock-timer__point:nth-child(24)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(25) {
+  rotate: 144deg;
+}
+.clock-timer__point:nth-child(25)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(26) {
+  rotate: 150deg;
+}
+.clock-timer__point:nth-child(26)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(27) {
+  rotate: 156deg;
+}
+.clock-timer__point:nth-child(27)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(28) {
+  rotate: 162deg;
+}
+.clock-timer__point:nth-child(28)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(29) {
+  rotate: 168deg;
+}
+.clock-timer__point:nth-child(29)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(30) {
+  rotate: 174deg;
+}
+.clock-timer__point:nth-child(30)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(31) {
+  rotate: 180deg;
+}
+.clock-timer__point:nth-child(31)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(32) {
+  rotate: 186deg;
+}
+.clock-timer__point:nth-child(32)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(33) {
+  rotate: 192deg;
+}
+.clock-timer__point:nth-child(33)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(34) {
+  rotate: 198deg;
+}
+.clock-timer__point:nth-child(34)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(35) {
+  rotate: 204deg;
+}
+.clock-timer__point:nth-child(35)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(36) {
+  rotate: 210deg;
+}
+.clock-timer__point:nth-child(36)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(37) {
+  rotate: 216deg;
+}
+.clock-timer__point:nth-child(37)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(38) {
+  rotate: 222deg;
+}
+.clock-timer__point:nth-child(38)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(39) {
+  rotate: 228deg;
+}
+.clock-timer__point:nth-child(39)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(40) {
+  rotate: 234deg;
+}
+.clock-timer__point:nth-child(40)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(41) {
+  rotate: 240deg;
+}
+.clock-timer__point:nth-child(41)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(42) {
+  rotate: 246deg;
+}
+.clock-timer__point:nth-child(42)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(43) {
+  rotate: 252deg;
+}
+.clock-timer__point:nth-child(43)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(44) {
+  rotate: 258deg;
+}
+.clock-timer__point:nth-child(44)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(45) {
+  rotate: 264deg;
+}
+.clock-timer__point:nth-child(45)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(46) {
+  rotate: 270deg;
+}
+.clock-timer__point:nth-child(46)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(47) {
+  rotate: 276deg;
+}
+.clock-timer__point:nth-child(47)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(48) {
+  rotate: 282deg;
+}
+.clock-timer__point:nth-child(48)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(49) {
+  rotate: 288deg;
+}
+.clock-timer__point:nth-child(49)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(50) {
+  rotate: 294deg;
+}
+.clock-timer__point:nth-child(50)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(51) {
+  rotate: 300deg;
+}
+.clock-timer__point:nth-child(51)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(52) {
+  rotate: 306deg;
+}
+.clock-timer__point:nth-child(52)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(53) {
+  rotate: 312deg;
+}
+.clock-timer__point:nth-child(53)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(54) {
+  rotate: 318deg;
+}
+.clock-timer__point:nth-child(54)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(55) {
+  rotate: 324deg;
+}
+.clock-timer__point:nth-child(55)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(56) {
+  rotate: 330deg;
+}
+.clock-timer__point:nth-child(56)::after {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+}
+.clock-timer__point:nth-child(57) {
+  rotate: 336deg;
+}
+.clock-timer__point:nth-child(57)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(58) {
+  rotate: 342deg;
+}
+.clock-timer__point:nth-child(58)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(59) {
+  rotate: 348deg;
+}
+.clock-timer__point:nth-child(59)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__point:nth-child(60) {
+  rotate: 354deg;
+}
+.clock-timer__point:nth-child(60)::after {
+  width: 2px;
+  height: 2px;
+  background: blue;
+}
+.clock-timer__pointer {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  height: 130px;
+  width: 2px;
+  background: red;
+  rotate: 10deg;
+  transform-origin: bottom center;
+}
+.clock-timer__pointer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -50%;
+}/*# sourceMappingURL=style.css.map */
