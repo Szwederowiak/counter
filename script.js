@@ -1,6 +1,6 @@
 class Timer {
     constructor() {
-        this.targetTime = new Date('12-28-2024');
+        this.targetTime = new Date('12-28-2024 14:17');
         this.startTime = new Date('12-9-2024 18:00');
         this.performanceStart = performance.now();
         this.remainingTime = {
