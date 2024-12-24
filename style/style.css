@@ -18,18 +18,18 @@ body {
 
 .header-timer {
   display: grid;
-  grid-template-columns: repeat(5, 60px);
+  grid-template-columns: repeat(4, 60px);
   margin: 0 auto 50px;
   grid-row-gap: 30px;
 }
 .header-timer__label {
   text-align: center;
-  grid-column: 1/6;
+  grid-column: 1/5;
   font-size: 20px;
 }
 .header-timer__description {
   text-align: center;
-  grid-column: 1/6;
+  grid-column: 1/5;
   font-size: 24px;
   font-weight: 500;
 }

@@ -1,6 +1,6 @@
 class Timer {
     constructor() {
-        this.targetTime = new Date('12-28-2024');
+        this.targetTime = new Date('12-28-2024 14:17');
         this.startTime = new Date('12-9-2024 18:00');
         this.performanceStart = performance.now();
         this.remainingTime = {
@@ -57,8 +57,8 @@ class Timer {
         this.remainingTime.fullMiliseconds = diff % 1000;
         this.remainingTime.fullSeconds = Math.floor((diff / 1000) % 60);
         this.remainingTime.fullMinutes = Math.floor((diff / (1000 * 60)) % 60);
-        this.remainingTime.fullHours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        this.remainingTime.fullDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+        this.remainingTime.fullHours = Math.floor((diff / (1000 * 60 * 60)));
+        // this.remainingTime.fullDays = Math.floor(diff / (1000 * 60 * 60 * 24));
     }
 
     requestAnimationFrame = () => {
@@ -80,7 +80,7 @@ class Timer {
 
     // Header timer
     headerTimerCountdown = () => {
-        this.headerTimer.querySelector(".header-timer__unit-value--days").textContent = this.remainingTime.fullDays;
+        // this.headerTimer.querySelector(".header-timer__unit-value--days").textContent = this.remainingTime.fullDays;
         this.headerTimer.querySelector(".header-timer__unit-value--hours").textContent = this.remainingTime.fullHours;
         this.headerTimer.querySelector(".header-timer__unit-value--minutes").textContent = this.remainingTime.fullMinutes;
         this.headerTimer.querySelector(".header-timer__unit-value--seconds").textContent = this.remainingTime.fullSeconds;
